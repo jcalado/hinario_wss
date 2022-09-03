@@ -55,7 +55,7 @@ io.on("connection", (socket) => {
 
     socket.on('reset', (room) => {
         console.log(`💣 Reset aos apresentadores e controlo na sala ${room}`)
-        socket.to(room).emit('reset', id)
+        socket.to(room).emit('reset', room)
     })
 });
 
