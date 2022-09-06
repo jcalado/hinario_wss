@@ -50,7 +50,7 @@ io.on("connection", (socket) => {
 
     socket.on('control-open', (room, index) => {
         console.log(`📂 Apresentador na sala ${room} vai abrir ${index}`)
-        socket.to(room).emit('client-open', index)
+        socket.to(room).emit('client-open', index, room)
     })
 
     socket.on('reset', (room) => {
